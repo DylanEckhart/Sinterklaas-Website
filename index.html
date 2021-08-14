@@ -6,12 +6,14 @@
     <title>Home | Sinterklaas Almere</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
     <section class="header">
         <nav>
             <a href="index.html"><img src="IMG/diego-ph-BCuxVP5WEsU-unsplash.jpg"></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
@@ -20,6 +22,7 @@
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="ShowMenu()"></i>
         </nav>
         <div class="text-box">
             <h1>Almere Sint Events</h1>
@@ -30,5 +33,20 @@
             <a href="" class="hero-btn">Kijk verder op onze website om meer te weten te komen!</a>
         </div>
     </section>
+
+<!--JavaScript to toggle and hide menu-->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+</script>
 </body>
 </html>
