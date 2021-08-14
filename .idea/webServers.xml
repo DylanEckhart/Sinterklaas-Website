@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0f95f43d-b0df-4983-b3a9-3fb7926e3b5c" name="Almere Sint Events" url="http://almeresintevents.nl/">
+        <fileTransfer accessType="SFTP" host="almeresintevents.nl.transurl.nl" port="22" sshConfigId="d8858882-2304-4c0e-9d61-d70a785e98d8" sshConfig="almeresintevents.nl@almeresintevents.nl.transurl.nl:22:63342 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

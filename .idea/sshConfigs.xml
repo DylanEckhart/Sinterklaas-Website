@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="almeresintevents.nl.transurl.nl" id="d8858882-2304-4c0e-9d61-d70a785e98d8" localPort="63342" port="22" nameFormat="DESCRIPTIVE" username="almeresintevents.nl" />
+    </configs>
+  </component>
+</project>
