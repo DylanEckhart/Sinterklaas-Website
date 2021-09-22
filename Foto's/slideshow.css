@@ -9,7 +9,7 @@
 }
 
 .mySlides {
-    display: none;
+    display: block;
 }
 
 .prev, .next {
@@ -84,4 +84,8 @@
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+img  {
+    width: 100%;
 }
