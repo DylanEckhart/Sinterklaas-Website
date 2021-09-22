@@ -1,11 +1,24 @@
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin:0
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+    width: 100%;
+}
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 800px;
     position: relative;
     margin: auto;
 }
@@ -94,8 +107,4 @@ img {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
-}
-
-img {
-    width: 100%;
 }
