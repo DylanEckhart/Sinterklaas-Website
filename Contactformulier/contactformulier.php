@@ -9,6 +9,9 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="../IMG/logo.png" type="image/icon" rel="icon">
 </head>
+<style>
+
+</style>
 <body>
 <section class="header">
     <nav>
@@ -28,14 +31,14 @@
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
     <div class="text-box">
-        <h1>Almere Sint Events</h1>
-        <p>
-
-
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at diam in lacus scelerisque dignissim
-            sit amet at ipsum. Suspendisse ornare magna quam, nec dictum leo convallis vel. Phasellus ut efficitur
-            magna.</p>
-        <a href="" class="hero-btn">Kijk verder op onze website om meer te weten te komen!</a>
+        <h2>Contactformulier</h2>
+        <form action="inputContactformulier.php" method="post">
+            Voornaam: <input type="text" name="first_name"><br>
+            Achternaam: <input type="text" name="last_name"><br>
+            Email: <input type="text" name="email"><br>
+            Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+            <input type="submit" name="submit" value="Submit">
+        </form>
     </div>
     <p class="copyright" id="copyrightTag">Copyright @Dylan Eckhart</p>
 </section>
