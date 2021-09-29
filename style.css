@@ -124,6 +124,7 @@ nav .fa {
     .text-box span {
         display: block;
         font-size: 12px;
+        line-height: 15px;
     }
 
     .nav-links ul li {
@@ -131,6 +132,7 @@ nav .fa {
     }
 
     .nav-links {
+        display: none;
         position: absolute;
         background: #f44336;
         height: 100vh;
@@ -155,5 +157,6 @@ nav .fa {
 
     }
 }
+
 
 

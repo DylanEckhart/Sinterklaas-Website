@@ -60,11 +60,12 @@
     let navLinks = document.getElementById("navLinks");
 
     function showMenu() {
+        navLinks.style.display = "block";
         navLinks.style.right = "0";
     }
 
     function hideMenu() {
-        navLinks.style.right = "-200px";
+        navLinks.style.display = "none";
     }
 
 </script>
