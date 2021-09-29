@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactformulier | Sinterklaas Almere</title>
+    <title>Contact | Sinterklaas Almere</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?" rel="stylesheet">
@@ -27,13 +27,13 @@
                 <li><a href="../Prijslijst/prijslijst.html">Prijslijst</a></li>
                 <li><a href="../Sint%20Vertelt/sint_vertelt.html">Sint vertelt</a></li>
                 <li><a href="../Foto's/fotos.html">Foto's</a></li>
-                <li><a href="contactformulier.php">Contactformulier</a></li>
+                <li><a href="contactformulier.php">Contact</a></li>
             </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
     <div class="text-box">
-        <h2>Contactformulier</h2><br>
+        <h2>Contact</h2><br>
         <p>
             Boekingen kunnen gedaan worden via het emaildres: <a href="mailto:info@almeresintevents.nl">info@almeresintevents.nl</a>
         </p>
