@@ -7,13 +7,13 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="stylesheet" type="text/css" href="../Contactformulier/formulier.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../IMG/logo.png" type="image/icon" rel="icon">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?" rel="stylesheet">
+    <link href="/IMG/logo.png" type="image/png" rel="icon">
 </head>
 <style>
 
 </style>
-<body>
+<body scroll="no" style="overflow: hidden">
 <section class="header">
     <nav>
         <img src="../IMG/logo.png" alt="logo">
