@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../Contactformulier/formulier.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../IMG/logo.png" type="image/icon" rel="icon">
+    <link href="../IMG/logo.jpg" type="image/icon" rel="icon">
 </head>
 <style>
 
@@ -16,7 +16,7 @@
 <body>
 <section class="header">
     <nav>
-        <img src="../IMG/logo.png" alt="logo">
+        <img src="../IMG/logo.jpg" alt="logo">
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
