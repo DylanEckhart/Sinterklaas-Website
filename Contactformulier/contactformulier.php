@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactformulier | Sinterklaas Almere</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
-    <link rel="stylesheet" type="text/css" href="../Contactformulier/formulier.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?" rel="stylesheet">
     <link href="/IMG/logo.png" type="image/png" rel="icon">
 </head>
 <style>
-
+     a {
+         color: white;
+     }
 </style>
 <body scroll="no" style="overflow: hidden">
 <section class="header">
@@ -33,23 +34,9 @@
     </nav>
     <div class="text-box">
         <h2>Contactformulier</h2><br>
-        <form action="inputContactformulier.php" method="post">
-
-            <label for="first_name">Voornaam:</label>
-            <input type="text" name="first_name"><br>
-
-            <label for="last_name">Achternaam:</label>
-            <input type="text" name="last_name"><br>
-
-            <label for="email">Email:</label>
-            <input type="text" name="email"><br>
-
-            <label for="message">Message:</label><br>
-            <textarea rows="5" name="message" cols="30"></textarea><br>
-
-            <input type="submit" name="submit" value="Submit">
-
-        </form>
+        <p>
+            Boekingen kunnen gedaan worden via het emaildres: <a href="mailto:info@almeresintevents.nl">info@almeresintevents.nl</a>
+        </p>
     </div>
     <p class="copyright" id="copyrightTag">Copyright @Dylan Eckhart</p>
 </section>
