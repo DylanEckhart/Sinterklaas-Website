@@ -38,7 +38,7 @@
             Boekingen kunnen gedaan worden via het emaildres: <a href="mailto:info@almeresintevents.nl">info@almeresintevents.nl</a>
         </p>
     </div>
-    <p class="copyright" id="copyrightTag">Copyright @Dylan Eckhart</p>
+    <p class="copyright" id="copyrightTag">&copy Dylan Eckhart</p>
 </section>
 
 <!--JavaScript to toggle and hide menu-->
