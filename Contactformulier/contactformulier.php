@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactformulier | Sinterklaas Almere</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../Contactformulier/formulier.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="../IMG/logo.png" type="image/icon" rel="icon">
@@ -31,13 +32,23 @@
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
     <div class="text-box">
-        <h2>Contactformulier</h2>
+        <h2>Contactformulier</h2><br>
         <form action="inputContactformulier.php" method="post">
-            Voornaam: <input type="text" name="first_name"><br>
-            Achternaam: <input type="text" name="last_name"><br>
-            Email: <input type="text" name="email"><br>
-            Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+
+            <label for="first_name">Voornaam:</label>
+            <input type="text" name="first_name"><br>
+
+            <label for="last_name">Achternaam:</label>
+            <input type="text" name="last_name"><br>
+
+            <label for="email">Email:</label>
+            <input type="text" name="email"><br>
+
+            <label for="message">Message:</label><br>
+            <textarea rows="5" name="message" cols="30"></textarea><br>
+
             <input type="submit" name="submit" value="Submit">
+
         </form>
     </div>
     <p class="copyright" id="copyrightTag">Copyright @Dylan Eckhart</p>
