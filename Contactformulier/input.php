@@ -1,3 +1,32 @@
+<?php
+
+    if (isset($_POST['submit'])) {
+        $to = "dylaneckhart09@gmail.com";
+        $from = $_POST['email'];
+
+        $voornaam = $_POST['voornaam'];
+        $achternaam  = $_POST['achternaam'];
+        $datum = $_POST['datum'];
+        $tijd = $_POST['tijd'];
+        $optie = $_POST['select'];
+
+        $subject = "Reservering Almere Sint Events";
+        $headers = "Van: " . $from;
+
+        $message = array($voornaam, $achternaam, $datum, $tijd, $optie);
+        mail($to, $subject, "hoi", $headers);
+
+        if (mail($to, $subject, "hoi", $headers)) {
+            print_r("Email is verstuurd");
+        } else {
+            print_r("Email is gefaald");
+        }
+    } else {
+        print_r("If loopt niet");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +35,6 @@
     <title>Contact | Sinterklaas Almere</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="contact_style.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?" rel="stylesheet">
     <link href="/IMG/logo.png" type="image/png" rel="icon">
 </head>
@@ -33,45 +61,12 @@
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
-    <div class="container">
-        <div class="container-form">
-            <form action="input.php" method="post">
-                <h2 class="heading">Reserveren</h2>
-                <div class="form-field">
-                    <p>Voornaam</p>
-                    <input type="text" name="voornaam" placeholder="Voornaam">
-                </div>
-                <div class="form-field">
-                    <p>Achternaam</p>
-                    <input type="text" name="achternaam" placeholder="Achternaam">
-                </div>
-                <div class="form-field">
-                    <p>Emailadres</p>
-                    <input type="email" name="email" placeholder="Emailadres">
-                </div>
-                <div class="form-field">
-                    <p>Datum</p>
-                    <input type="date" name="datum">
-                </div>
-                <div class="form-field">
-                    <p>Tijd</p>
-                    <input type="time" name="tijd">
-                </div>
-                <div class="form-field">
-                    <p>Welke optie wilt u?</p>
-                    <select name="select" id="#">
-                        <option value="1">Videosint</option>
-                        <option value="2">Bellen met Sint</option>
-                        <option value="3">Flitsbezoek door Piet</option>
-                        <option value="4">Twee Pieten</option>
-                        <option value="5">Drie Pieten</option>
-                        <option value="6">Sinterklaas + Een Piet</option>
-                        <option value="6">Sinterklaas + Twee Pieten</option>
-                    </select>
-                </div>
-                <button class="btn" name="submit">Submit</button>
-            </form>
-        </div>
+    <div class="text-box">
+        <h2>Reservering</h2>
+        <p><span>
+            Hou uw mail in de gaten.<br>
+            <a href="../index.html">Ga hier terug naar de homepagina.</a>
+        </span></p>
     </div>
     <p class="copyright" id="copyrightTag">&copy Dylan Eckhart</p>
 </section>
