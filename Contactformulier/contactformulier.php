@@ -36,7 +36,7 @@
     <div class="container">
         <div class="container-form">
             <form action="">
-                <h2 class="heading">Reserveringen</h2>
+                <h2 class="heading">Reserveren</h2>
                 <div class="form-field">
                     <p>Voornaam</p>
                     <input type="text" placeholder="Voornaam">
