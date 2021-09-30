@@ -6,6 +6,7 @@
     <title>Contact | Sinterklaas Almere</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="contact_style.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?" rel="stylesheet">
     <link href="/IMG/logo.png" type="image/png" rel="icon">
 </head>
@@ -32,11 +33,45 @@
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
-    <div class="text-box">
-        <h2>Contact</h2><br>
-        <p>
-            Boekingen kunnen gedaan worden via het emaildres: <a href="mailto:info@almeresintevents.nl">info@almeresintevents.nl</a>
-        </p>
+    <div class="container">
+        <div class="container-form">
+            <form action="">
+                <h2 class="heading">Reserveringen</h2>
+                <div class="form-field">
+                    <p>Voornaam</p>
+                    <input type="text" placeholder="Voornaam">
+                </div>
+                <div class="form-field">
+                    <p>Achternaam</p>
+                    <input type="text" placeholder="Achternaam">
+                </div>
+                <div class="form-field">
+                    <p>Emailadres</p>
+                    <input type="email" placeholder="Emailadres">
+                </div>
+                <div class="form-field">
+                    <p>Datum</p>
+                    <input type="date">
+                </div>
+                <div class="form-field">
+                    <p>Tijd</p>
+                    <input type="time">
+                </div>
+                <div class="form-field">
+                    <p>Welke optie wilt u?</p>
+                    <select name="select" id="#">
+                        <option value="1">Videosint</option>
+                        <option value="2">Bellen met Sint</option>
+                        <option value="3">Flitsbezoek door Piet</option>
+                        <option value="4">Twee Pieten</option>
+                        <option value="5">Drie Pieten</option>
+                        <option value="6">Sinterklaas + Een Piet</option>
+                        <option value="6">Sinterklaas + Twee Pieten</option>
+                    </select>
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+        </div>
     </div>
     <p class="copyright" id="copyrightTag">&copy Dylan Eckhart</p>
 </section>
