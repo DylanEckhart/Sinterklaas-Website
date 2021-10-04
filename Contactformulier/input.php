@@ -8,9 +8,6 @@
     // Try/Catch to connect to database "sinterklaas"
     $connection = mysqli_connect($servername, $username, $password, 'sinterklaas');
 
-    // Send mail to customer
-    mail ("info@almeresintevents.nl", "Reservering Almere Sint Events", "Dit is een test", "From: info@almeresintevents.nl ");
-
     // Inputs from HTML form
     $voornaam = $_POST['voornaam'];
     $achternaam = $_POST['achternaam'];
@@ -22,8 +19,8 @@
     $sql = "INSERT INTO 'reserveren' ('idreserveren', 'voornaam', 'achternaam', 'datum', 'tijd') VALUES ('0', '$voornaam', '$achternaam', '$datum', '$tijd')";
     $rs = mysqli_query($connection, $sql);
 
-
-
+    // Send mail to customer
+    mail ("dylaneckhart09@gmail.com", "Reservering Almere Sint Events", "Hierbij uw reservering: $voornaam, $achternaam, $emailadres, $datum, $tijd", "From: info@almeresintevents.nl ");
 
 ?>
 
