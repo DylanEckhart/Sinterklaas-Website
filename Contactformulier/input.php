@@ -6,16 +6,24 @@
     $password = "root";
 
     // Try/Catch to connect to database "sinterklaas"
-    try {
-        $connection = new PDO("mysql:host=$servername;dbname=sinterklaas", $username, $password);
-        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connected Successfully";
-    } catch (PDOException $e) {
-        echo "Connection Failed: " . $e->getMessage();
-    }
+    $connection = mysqli_connect($servername, $username, $password, 'sinterklaas');
 
     // Send mail to customer
     mail ("info@almeresintevents.nl", "Reservering Almere Sint Events", "Dit is een test", "From: info@almeresintevents.nl ");
+
+    // Inputs from HTML form
+    $voornaam = $_POST['voornaam'];
+    $achternaam = $_POST['achternaam'];
+    $emailadres = $_POST['email'];
+    $datum = $_POST['datum'];
+    $tijd = $_POST['tijd'];
+
+    // Insert HTML form inputs into database "sinterklaas"
+    $sql = "INSERT INTO 'reserveren' ('idreserveren', 'voornaam', 'achternaam', 'datum', 'tijd') VALUES ('0', '$voornaam', '$achternaam', '$datum', '$tijd')";
+    $rs = mysqli_query($connection, $sql);
+
+
+
 
 ?>
 
