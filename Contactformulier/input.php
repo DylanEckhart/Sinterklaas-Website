@@ -1,29 +1,21 @@
 <?php
 
-    if (isset($_POST['submit'])) {
-        $to = "dylaneckhart09@gmail.com";
-        $from = $_POST['email'];
+    // Connection inputs to MySQL database
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
 
-        $voornaam = $_POST['voornaam'];
-        $achternaam  = $_POST['achternaam'];
-        $datum = $_POST['datum'];
-        $tijd = $_POST['tijd'];
-        $optie = $_POST['select'];
-
-        $subject = "Reservering Almere Sint Events";
-        $headers = "Van: " . $from;
-
-        $message = array($voornaam, $achternaam, $datum, $tijd, $optie);
-        mail($to, $subject, "hoi", $headers);
-
-        if (mail($to, $subject, "hoi", $headers)) {
-            print_r("Email is verstuurd");
-        } else {
-            print_r("Email is gefaald");
-        }
-    } else {
-        print_r("If loopt niet");
+    // Try/Catch to connect to database "sinterklaas"
+    try {
+        $connection = new PDO("mysql:host=$servername;dbname=sinterklaas", $username, $password);
+        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected Successfully";
+    } catch (PDOException $e) {
+        echo "Connection Failed: " . $e->getMessage();
     }
+
+    // Send mail to customer
+    mail ("info@almeresintevents.nl", "Reservering Almere Sint Events", "Dit is een test", "From: info@almeresintevents.nl ");
 
 ?>
 
