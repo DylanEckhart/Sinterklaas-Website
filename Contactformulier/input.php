@@ -4,9 +4,10 @@
     $servername = "localhost";
     $username = "root";
     $password = "root";
+    $databaseName = "sinterklaas";
 
     // Try/Catch to connect to database "sinterklaas"
-    $connection = mysqli_connect($servername, $username, $password, 'sinterklaas');
+    $connection = mysqli_connect($servername, $username, $password, $databaseName);
 
     // Inputs from HTML form
     $voornaam = $_POST['voornaam'];
