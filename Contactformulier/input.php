@@ -2,11 +2,11 @@
 
     // Connection inputs to MySQL database
     $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $databaseName = "sinterklaas";
+    $username = "almeresintevents_nl_sinterklaas";
+    $password = "7xGzuN7HQVsU";
+    $databaseName = "almeresintevents_nl_sinterklaas";
 
-    // Try/Catch to connect to database "sinterklaas"
+    // Connect to database "sinterklaas"
     $connection = mysqli_connect($servername, $username, $password, $databaseName);
 
     // Inputs from HTML form
@@ -15,17 +15,18 @@
     $emailadres = $_POST['email'];
     $datum = $_POST['datum'];
     $tijd = $_POST['tijd'];
+    $keuze = $_POST['select'];
 
     // Change ":" to "."
     $array = explode(':', $tijd);
     $tijd = implode('.', $array);
 
     // Insert HTML form inputs into database "sinterklaas"
-    $sql = "INSERT INTO reserveren (idreserveren, voornaam, achternaam, datum, tijd) VALUES ('0', '$voornaam', '$achternaam', '$datum', $tijd)";
+    $sql = "INSERT INTO reserveren (idreserveren, voornaam, achternaam, email, datum, tijd, keuze) VALUES ('0', '$voornaam', '$achternaam', '$emailadres', '$datum', $tijd, '$keuze')";
     $rs = mysqli_query($connection, $sql);
 
     // Send mail to customer
-    mail ($emailadres, "Reservering Almere Sint Events", "Hierbij uw reservering: $voornaam, $achternaam, $emailadres, $datum, $tijd", "From: info@almeresintevents.nl ");
+    mail ($emailadres, "Reservering Almere Sint Events", "Hierbij uw reservering: $voornaam, $achternaam, $emailadres, $datum, $tijd, $keuze", "From: info@almeresintevents.nl ");
 
 ?>
 
