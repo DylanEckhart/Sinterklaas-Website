@@ -16,12 +16,16 @@
     $datum = $_POST['datum'];
     $tijd = $_POST['tijd'];
 
+    // Change ":" to "."
+    $array = explode(':', $tijd);
+    $tijd = implode('.', $array);
+
     // Insert HTML form inputs into database "sinterklaas"
-    $sql = "INSERT INTO 'reserveren' ('idreserveren', 'voornaam', 'achternaam', 'datum', 'tijd') VALUES ('0', '$voornaam', '$achternaam', '$datum', '$tijd')";
+    $sql = "INSERT INTO reserveren (idreserveren, voornaam, achternaam, datum, tijd) VALUES ('0', '$voornaam', '$achternaam', '$datum', $tijd)";
     $rs = mysqli_query($connection, $sql);
 
     // Send mail to customer
-    mail ("dylaneckhart09@gmail.com", "Reservering Almere Sint Events", "Hierbij uw reservering: $voornaam, $achternaam, $emailadres, $datum, $tijd", "From: info@almeresintevents.nl ");
+    mail ($emailadres, "Reservering Almere Sint Events", "Hierbij uw reservering: $voornaam, $achternaam, $emailadres, $datum, $tijd", "From: info@almeresintevents.nl ");
 
 ?>
 
