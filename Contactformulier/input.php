@@ -22,7 +22,7 @@
     $tijd = implode('.', $array);
 
     // Insert HTML form inputs into database "sinterklaas"
-    $sql = "INSERT INTO reserveren (idreserveren, voornaam, achternaam, email, datum, tijd, keuze) VALUES ('0', '$voornaam', '$achternaam', '$emailadres', '$datum', $tijd, '$keuze')";
+    $sql = "INSERT INTO reserveren (voornaam, achternaam, email, datum, tijd, keuze) VALUES ('$voornaam', '$achternaam', '$emailadres', '$datum', $tijd, '$keuze')";
     $rs = mysqli_query($connection, $sql);
 
     // Send mail to customer
