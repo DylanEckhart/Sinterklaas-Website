@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="268255281983-m2bq04o2c34pmdmgdstvj7o8lq0q7nhd.apps.googleusercontent.com">
     <title>Contact | Sinterklaas Almere</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="stylesheet" type="text/css" href="adminStyle.css">
@@ -10,11 +11,6 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?" rel="stylesheet">
     <link href="/IMG/logo.png" type="image/png" rel="icon">
 </head>
-<style>
-    a {
-        color: white;
-    }
-</style>
 <body scroll="no" style="overflow: hidden">
 <section class="header">
     <nav>
@@ -36,28 +32,24 @@
     </nav>
     <div class="container">
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
+        <div class="data">
+            <p>Name</p>
+                <p id="name"></p>
+            <p>Image</p>
+                <img id="image" class="rounded-circle" width="100" height="100">
+            <p>Email</p>
+                <p id="email"></p>
+            <button type="button" class="btn btn-danger" onclick="signOut();">Sign Out</button>
+        </div>
     </div>
     <p class="copyright" id="copyrightTag">&copy Dylan Eckhart</p>
 </section>
 
+<!--Load JavaScript file + toggle and hide menu-->
+<script src="googleLogin.js" async defer></script>
+
 <!--Load Google Platform Library-->
 <script src="https://apis.google.com/js/platform.js?" async defer></script>
 
-<!--JavaScript to toggle and hide menu-->
-<script>
-
-    let navLinks = document.getElementById("navLinks");
-
-    function showMenu() {
-        navLinks.style.display = "block";
-        navLinks.style.right = "0";
-    }
-
-    function hideMenu() {
-        navLinks.style.display = "none";
-    }
-
-</script>
 </body>
 </html>

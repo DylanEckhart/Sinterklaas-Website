@@ -1,2 +1,19 @@
+a {
+    color: white;
+}
 
+/* Google Button*/
+.data {
+    display: none;
+    border-radius: 10px;
+}
+
+.g-signin2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    border-radius: 10px;
+}
 

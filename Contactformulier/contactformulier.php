@@ -29,6 +29,7 @@
                 <li><a href="../Sint%20Vertelt/sint_vertelt.html">Sint vertelt</a></li>
                 <li><a href="../Foto's/fotos.html">Foto's</a></li>
                 <li><a href="contactformulier.php">Reserveren</a></li>
+                <li><a href="../Admin/index.php">Admin</a></li>
             </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
