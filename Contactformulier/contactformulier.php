@@ -28,11 +28,17 @@
                 <li><a href="../Prijslijst/prijslijst.html">Prijslijst</a></li>
                 <li><a href="../Sint%20Vertelt/sint_vertelt.html">Sint vertelt</a></li>
                 <li><a href="../Foto's/fotos.html">Foto's</a></li>
-                <li><a href="contactformulier.php">Contact</a></li>
+                <li><a href="contactformulier.php">Reserveren</a></li>
             </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
+<!--    <div class="text-box">-->
+<!--        <h2>Reservering</h2>-->
+<!--        <p><span>-->
+<!--            <a>Voor reseveringen kunt u terecht op het mailadres: info@almeresintevents.nl</a>-->
+<!--        </span></p>-->
+<!--    </div>-->
     <div class="container">
         <div class="container-form">
             <form action="input.php" method="post">

@@ -9,25 +9,36 @@
     // Connect to database "sinterklaas"
     $connection = mysqli_connect($servername, $username, $password, $databaseName);
 
+//    // Check if connection is working
+//    if ($connection->connect_error) {
+//        die("Connection failed: " . $connection->connect_error);
+//    }
+//    echo "Connected successfully";
+
     // Inputs from HTML form
     $voornaam = $_POST['voornaam'];
+    $voornaam = mysqli_real_escape_string($connection, $voornaam);
+
     $achternaam = $_POST['achternaam'];
+    $achternaam = mysqli_real_escape_string($connection, $achternaam);
+
     $emailadres = $_POST['email'];
+    $emailadres = mysqli_real_escape_string($connection, $emailadres);
+
     $datum = $_POST['datum'];
     $tijd = $_POST['tijd'];
     $keuze = $_POST['select'];
 
     // Change ":" to "."
-    $array = explode(':', $tijd);
-    $tijd = implode('.', $array);
+    $arrayTime = explode(':', $tijd);
+    $tijd = implode(':', $arrayTime);
 
     // Insert HTML form inputs into database "sinterklaas"
-    $sql = "INSERT INTO reserveren (voornaam, achternaam, email, datum, tijd, keuze) VALUES ('$voornaam', '$achternaam', '$emailadres', '$datum', $tijd, '$keuze')";
+    $sql = "INSERT INTO reserveren (voornaam, achternaam, email, datum, tijd, keuze) VALUES ('$voornaam', '$achternaam', '$emailadres', '$datum', '$tijd', '$keuze')";
     $rs = mysqli_query($connection, $sql);
 
     // Send mail to customer
     mail ($emailadres, "Reservering Almere Sint Events", "Hierbij uw reservering: $voornaam, $achternaam, $emailadres, $datum, $tijd, $keuze", "From: info@almeresintevents.nl ");
-
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +70,7 @@
                 <li><a href="../Prijslijst/prijslijst.html">Prijslijst</a></li>
                 <li><a href="../Sint%20Vertelt/sint_vertelt.html">Sint vertelt</a></li>
                 <li><a href="../Foto's/fotos.html">Foto's</a></li>
-                <li><a href="contactformulier.php">Contact</a></li>
+                <li><a href="contactformulier.php">Reserveren</a></li>
             </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
