@@ -1,19 +1,9 @@
 <?php
 
-    // Connection inputs to MySQL database
-    $servername = "localhost";
-    $username = "almeresintevents_nl_sinterklaas";
-    $password = "7xGzuN7HQVsU";
-    $databaseName = "almeresintevents_nl_sinterklaas";
+    require_once "connection.php";
 
-    // Connect to database "sinterklaas"
-    $connection = mysqli_connect($servername, $username, $password, $databaseName);
-
-//    // Check if connection is working
-//    if ($connection->connect_error) {
-//        die("Connection failed: " . $connection->connect_error);
-//    }
-//    echo "Connected successfully";
+    // Call function to connect to database
+    $connection = databaseConnection();
 
     // Inputs from HTML form
     $voornaam = $_POST['voornaam'];
